@@ -11,7 +11,8 @@ var telescopeId = Posts.insert({
 title: 'Introducing Telescope',
 userId: sacha._id,
 author: sacha.profile.name,
-url: 'http://sachagreif.com/introducing-telescope/', submitted: now - 7 * 3600 * 1000
+url: 'http://sachagreif.com/introducing-telescope/', submitted: now - 7 * 3600 * 1000,
+commentsCount: 2
 });
 Comments.insert({
 postId: telescopeId,
@@ -29,11 +30,13 @@ Posts.insert({
 title: 'Meteor',
 userId: tom._id,
 author: tom.profile.name,
-url: 'http://meteor.com', submitted: now - 10 * 3600 * 1000
+url: 'http://meteor.com', submitted: now - 10 * 3600 * 1000,
+commentsCount: 0
 });
 Posts.insert({
 title: 'The Meteor Book',
 userId: tom._id,
 author: tom.profile.name,
-url: 'http://themeteorbook.com', submitted: now - 12 * 3600 * 1000
+url: 'http://themeteorbook.com', submitted: now - 12 * 3600 * 1000,
+commentsCount: 0
 }); }

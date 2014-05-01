@@ -11,5 +11,6 @@ comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), { userId: user._
 author: user.username,
 submitted: new Date().getTime()
 });
+Posts.update(comment.postId, {$inc: {commentsCount: 1}});
 return Comments.insert(comment); }
 });
