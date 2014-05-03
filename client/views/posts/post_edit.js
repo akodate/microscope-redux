@@ -18,10 +18,11 @@ Template.postEdit.events({ 'submit form': function(e) {
 
   'click .delete': function(e) {
     e.preventDefault();
+
     if (confirm("Delete this post?")) {
       var currentPostId = this._id;
       Posts.remove(currentPostId);
-      Router.go('postsList');
+      Router.go('home');
     }
   }
 });
